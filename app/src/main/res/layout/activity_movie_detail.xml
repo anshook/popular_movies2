@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_all">
+            <ImageView
+                android:id="@+id/poster_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/original_title_label"
+                        android:paddingTop="@dimen/padding_labeltext_top"
+                        android:textSize="@dimen/textsize_detail"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/original_title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_detail"/>
+                </LinearLayout>
+                <ToggleButton
+                    android:layout_marginHorizontal="@dimen/padding_all"
+                    android:id="@+id/favorite_tb"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/button_favorite"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/synopsis_label"
+                android:paddingTop="@dimen/padding_labeltext_top"
+                android:textSize="@dimen/textsize_detail"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/synopsis_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_detail"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_rating_label"
+                android:paddingTop="@dimen/padding_labeltext_top"
+                android:textSize="@dimen/textsize_detail"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rating_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_detail"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/release_date_label"
+                android:paddingTop="@dimen/padding_labeltext_top"
+                android:textSize="@dimen/textsize_detail"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/release_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_detail"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trailers_label"
+                android:paddingTop="@dimen/padding_labeltext_top"
+                android:textSize="@dimen/textsize_subheading"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trailer_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/tv_no_trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_trailers"
+                android:textSize="@dimen/textsize_detail"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reviews_label"
+                android:paddingTop="@dimen/padding_labeltext_top"
+                android:textSize="@dimen/textsize_subheading"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/review_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/tv_no_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_reviews"
+                android:textSize="@dimen/textsize_detail"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
