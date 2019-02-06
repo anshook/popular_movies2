@@ -42,8 +42,8 @@
                 <ToggleButton
                     android:layout_marginHorizontal="@dimen/padding_all"
                     android:id="@+id/favorite_tb"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/fav_btn_size"
+                    android:layout_height="@dimen/fav_btn_size"
                     android:background="@drawable/button_favorite"
                     android:checked="false"
                     android:text=""

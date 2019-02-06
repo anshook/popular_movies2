@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private AlertDialog.Builder buildDialog(Context ctx) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-        builder.setMessage("No Internet Connection. Make sure Cellular Data or WiFi is turned on, then try again.");
+        builder.setMessage(getString(R.string.no_connection));
 
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 

@@ -129,7 +129,10 @@ public class MovieDetailActivity extends AppCompatActivity {
     }
 
     private void populateUI() {
-        Picasso.with(this).load(MOVIE_POSTER_BASE_URL+movie.getPosterImagePath()).into(mPosterImageView);
+        Picasso.with(this).load(MOVIE_POSTER_BASE_URL+movie.getPosterImagePath())
+                .placeholder(R.drawable.ic_wait)
+                .error(R.drawable.error)
+                .into(mPosterImageView);
 
         mTitleText.setText(replaceEmptyValue(movie.getOriginalTitle()));
         mSynopsisText.setText(replaceEmptyValue(movie.getSynopsis()));
